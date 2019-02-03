@@ -1,0 +1,20 @@
+{
+  "name": "imdb",
+  "version": "1.0.0",
+  "description": "rest apis for imdb project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "nodemon ./index.js"
+  },
+  "author": "kaushil rambhia",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "fastify": "^1.13.4",
+    "jsonwebtoken": "^8.4.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.9",
+    "squel": "^5.12.2"
+  }
+}

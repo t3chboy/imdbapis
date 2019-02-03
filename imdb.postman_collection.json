@@ -1,0 +1,296 @@
+{
+	"id": "2ab7ebbe-5912-446b-9a00-189cbba01b25",
+	"name": "imdb",
+	"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"d92e343e-890b-474f-a3a0-a457f3a62762",
+		"618116e9-6d5c-444a-945a-4d6e5c6d4a89",
+		"6fd2b471-db6d-4918-ae95-6fbe3daa0bb6",
+		"d9982474-1152-41a3-be5f-d5428d7cafb2",
+		"9c9366d8-b9f9-4e0f-88e5-bdb2438a59dd",
+		"b7746697-2880-4434-94bc-87f7e99069e3",
+		"c94ba2fa-93ee-49a0-bce4-eeb98aa184de",
+		"89f710dd-5ec5-4b3f-abe6-cb63d7a77da1"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "618116e9-6d5c-444a-945a-4d6e5c6d4a89",
+			"name": "Signup",
+			"url": "http://localhost:3000/signup",
+			"description": "Sigup is used to generate ssotoken( Jwt ) and use it futher for auth",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "nam",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"name\" : \"kaushil\",\n\t\"roleId\" : 9091\n}",
+			"headers": "nam: \nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6fd2b471-db6d-4918-ae95-6fbe3daa0bb6",
+			"name": "Delete movie",
+			"url": "http://localhost:3000/movie/3",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb1BheWxvYWQiOnsibmFtZSI6ImthdXNoaWwiLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNTQ5MjIwMjYzLCJleHAiOjE1NDkzMDY2NjN9.yxpdltennUgyXjyRCK2xyjCeZDDWmM9xDnaif93DQFU",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "roleId",
+					"value": "9091",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "//Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb1BheWxvYWQiOnsibmFtZSI6ImthdXNoaWwiLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNTQ5MjIwMjYzLCJleHAiOjE1NDkzMDY2NjN9.yxpdltennUgyXjyRCK2xyjCeZDDWmM9xDnaif93DQFU\nroleId: 9091\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "89f710dd-5ec5-4b3f-abe6-cb63d7a77da1",
+			"name": "Admin update movie",
+			"url": "http://localhost:3000/movie/41",
+			"description": "Admin update movie",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb1BheWxvYWQiOnsibmFtZSI6ImthdXNoaWwiLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNTQ5MjIwMjYzLCJleHAiOjE1NDkzMDY2NjN9.yxpdltennUgyXjyRCK2xyjCeZDDWmM9xDnaif93DQFU",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "roleId",
+					"value": "9091",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\"name\":\"The Matrix\",\n\"director\": \"Lana Wachowski\",\n\"year\":1999,\n\"rank\":8.7,\n\"genre\": [\n       \"Action\", \"Sci-Fi\", \"Drama\"\n    ]\n}",
+			"headers": "Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb1BheWxvYWQiOnsibmFtZSI6ImthdXNoaWwiLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNTQ5MjIwMjYzLCJleHAiOjE1NDkzMDY2NjN9.yxpdltennUgyXjyRCK2xyjCeZDDWmM9xDnaif93DQFU\nroleId: 9091\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9c9366d8-b9f9-4e0f-88e5-bdb2438a59dd",
+			"name": "basic search",
+			"url": "http://localhost:3000/search?q=kaushal uri&listsize=20&offset=0",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "q",
+					"value": "kaushal uri",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "listsize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "offset",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "b7746697-2880-4434-94bc-87f7e99069e3",
+			"name": "With right search query ( Advance Search )",
+			"url": "http://localhost:3000/search/advance?movie_name=uri&director_name=aditya",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "movie_name",
+					"value": "uri",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "director_name",
+					"value": "aditya",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "c94ba2fa-93ee-49a0-bce4-eeb98aa184de",
+			"name": "With wrong search query ( Advance Search )",
+			"url": "http://localhost:3000/search/advance?movie_name=uri&director_name=kaushil&release_year=2019",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "movie_name",
+					"value": "uri",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "director_name",
+					"value": "kaushil",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "release_year",
+					"value": "2019",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d92e343e-890b-474f-a3a0-a457f3a62762",
+			"name": "Admin Create movie",
+			"url": "http://localhost:3000/movie",
+			"description": "Admin create new movie",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb1BheWxvYWQiOnsibmFtZSI6ImthdXNoaWwiLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNTQ5MjIwMjYzLCJleHAiOjE1NDkzMDY2NjN9.yxpdltennUgyXjyRCK2xyjCeZDDWmM9xDnaif93DQFU",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "roleId",
+					"value": "9091",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\"name\":\"Game of Thrones\",\n\"director\": \" David Benioff\",\n\"year\":1999,\n\"rank\":9.5,\n\"genre\": [\n       \"Action\", \"Sci-Fi\"\n    ]\n}",
+			"headers": "Content-Type: application/json\nAuthorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb1BheWxvYWQiOnsibmFtZSI6ImthdXNoaWwiLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNTQ5MjIwMjYzLCJleHAiOjE1NDkzMDY2NjN9.yxpdltennUgyXjyRCK2xyjCeZDDWmM9xDnaif93DQFU\nroleId: 9091\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d9982474-1152-41a3-be5f-d5428d7cafb2",
+			"name": "Signup",
+			"url": "http://localhost:3000/signup",
+			"description": "Sigup is used to generate ssotoken( Jwt ) and use it futher for auth",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "nam",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"name\" : \"kaushil\",\n\t\"roleId\" : 9091\n}",
+			"headers": "nam: \nContent-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}
