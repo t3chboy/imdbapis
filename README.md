@@ -86,16 +86,18 @@ Since We had requirment to handle traffic approx ~15M Apis
   
   - We can also store data using `ElasticSearch` based on `genres`, since its inverted index helps to fetch data more faster than using Mysql Joins.
   
-  - We can use `microservice` based architecture to scale our application X times, since we are using fastify framework it can easly used to convert this app into micro service architecture.
+  - We can use `microservice` based architecture to scale our application X times, since we are using fastify framework it can easly used to convert this app into micro service architecture.Mircoservice will also help to scale any individual module X times as per requirment for eg :
+    1. While runnning marketting campaign for a particular movie or genre.
+    2. Release of a particular movie. 
   
   - Major bottle neck would be Mysql joins, so for this based on time period we can store early data in elasticseacrh or Redis depending on product requirment, 
   eg: 
-  - Keeping all Freedom fighting movies in single document during Independenace Day.
-  - Keeping all Animation and children movies in single document during vaccations.
+  - Collecting all Freedom fighting movies in single document during Independenace Day.
+  - Collecting all Animation and children movies in single document during vaccations.
   
   - We can also have front end `cache controls` using response headers for GET request with cache timeouts.
   
-  - We should also study and store user `GET search` request, so we can apply MI/AL and store data accordingly.
+  - We should also store and study users made `GET search` request, so we can apply ML/AI on this activities and provide more user preferred and personalize recommendation.
 ###### Things to watch out !!!!
 [How and Why Fastify So FAST!!!](https://thenewstack.io/introducing-fastify-speedy-node-js-web-framework/)
 
